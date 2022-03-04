@@ -120,7 +120,7 @@ Select Nome as Cliente,Sexo,Email from Cliente;
  /*Apenas para fins Academincos*/
 Select * From Cliente;
 
-* FILTRANDO DADOS COM WHERE E LIKE */
+/* FILTRANDO DADOS COM WHERE E LIKE */
 
 SELECT NOME, TELEFONE FROM CLIENTE;
 
