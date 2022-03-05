@@ -22,19 +22,17 @@ select count(*), departamento
 from funcionarios
 group by departamento;
 
-SELECT * FROM FUNCIONARIOS
-WHERE
-( DEPARTAMENTO = 'Lar' AND SEXO = 'Feminino' )
-OR
-( DEPARTAMENTO = 'Filmes' AND SEXO = 'Feminino' );
+
+SELECT * FROM funcionarios
+WHERE sexo='Feminino' AND departamento='Lar' OR
+sexo='Feminino' AND departamento='Filmes';
+
 
 --Traga os funcionarios do sexo masculino
 --ou os funcionarios que trabalhem no setor Jardim
 
-SELECT * FROM FUNCIONARIOS
-WHERE
-SEXO = 'Masculino' OR
-DEPARTAMENTO = 'Jardim';
+SELECT * FROM funcionarios
+WHERE sexo='Masculino' OR departamento='Jardim';
 
 create database exercicio;
 
