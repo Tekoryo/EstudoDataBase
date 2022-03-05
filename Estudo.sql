@@ -170,3 +170,40 @@ AND -> PARA QUE A SAIDA SEJA VERDADEIRA TODAS AS CONDICOES PRECISAM SER VERDADEI
 /*
 Segundo exerciso de fixação
 Teste De Performace					*/
+
+--Filtrando valores null
+
+/*Email que são null*/
+SELECT nome,sexo, endereco FROM Cliente WHERE Email is null; 
+/*Email que não são null*/
+SELECT nome,sexo, endereco FROM Cliente WHERE Email IS NOT null; 
+
+--Clausula Update
+
+UPDATE Cliente SET Email = 'LILIAN@HOTMAIL.com' ; --Modifica tudo
+ 
+UPDATE Cliente SET Email = 'JORGE@HOTMAIL.com' 
+WHERE Nome ='JORGE'; --Modifica o jorge
+
+--Clausula Delete
+
+Delete From Cliente; -- excluira a tabela inteira
+
+/*Conselho do professor*/
+
+SELECT * FROM Cliente WHERE Nome='Ana'; 
+-- or
+SELECT COUNT(*) FROM Cliente; -- VAI SABER QUANTAS PESSOAS TEM
+SELECT COUNT(*) FROM Cliente
+WHERE Nome= 'ANA'; -- Vai saber se tem mais de uma ana ou não
+
+DELETE  FROM Cliente 
+WHERE Nome='ANA';
+
+DELETE  FROM Cliente 
+WHERE Nome='Carla'
+AND Email='CARLA@TERATI.COM.BR';
+
+
+ 
+
